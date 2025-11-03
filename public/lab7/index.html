@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторна робота №7 - Кешування</title>
+    <link rel="stylesheet" href="style.php">
+</head>
+<body>
+    <div class="container">
+        <h1>Лабораторна робота №7</h1>
+        <p>Перевірте вкладку "Network" у Вашому браузері, щоб побачити ефект кешування.</p>
+
+        <h2>Клієнтське кешування (HTTP-заголовки)</h2>
+        <div class="test-case">
+            <p>CSS-файл та зображення нижче кешуються браузером на 1 день.</p>
+            <img src="image.php" alt="Згенероване зображення з часом" style="border: 1px solid #ccc; border-radius: 4px;">
+        </div>
+
+        <h2>Серверне кешування у файл</h2>
+        <div class="test-case">
+            <p>
+                Цей <strong>HTML-звіт</strong> генерується 3 секунди і кешується у файл на 10 хвилин.
+                Спробуйте оновити сторінку декілька разів.
+            </p>
+            <iframe src="generate-report.php" class="report-frame"></iframe>
+        </div>
+
+        <h2>Серверне кешування у сесію</h2>
+        <div class="test-case">
+            <p>Ці <strong>курси валют</strong> генеруються 2 секунди, але кешуються в сесію на 30 секунд.</p>
+            <iframe src="session-cache.php" class="report-frame simple-frame"></iframe>
+        </div>
+
+        <h2>Серверне кешування (статична властивість)</h2>
+        <div class="test-case">
+            <p>Цей <strong>список новин</strong> генерується 2 секунди і кешується в статичній змінній класу на час життя одного PHP-запиту.</p>
+            <p>Скрипт викликає функцію двічі: перша генерація буде повільною, а друга - миттєвою (взята зі статичного кешу).</p>
+            <iframe src="static-cache.php" class="report-frame simple-frame" style="height: 250px;"></iframe>
+        </div>
+    </div>
+</body>
+</html>
+

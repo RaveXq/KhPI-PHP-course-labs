@@ -5,3 +5,4 @@
 .idea
 .DS_Store
 .idea/*
+/lab7/cache/
